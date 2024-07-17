@@ -66,8 +66,8 @@ export default function Contact() {
                         <SelectGroup>
                           <SelectLabel>Select a service</SelectLabel>
                           <SelectItem value="est">Web Development</SelectItem>
-                          <SelectItem value="cst"> Web Development</SelectItem>
-                          <SelectItem value="mst">Web Development</SelectItem>
+                          <SelectItem value="cst"> UI/UX design</SelectItem>
+                          <SelectItem value="mst">Frontend Development</SelectItem>
 
                         </SelectGroup>
                       </SelectContent>
