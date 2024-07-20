@@ -46,11 +46,11 @@ export default function Contact() {
               {/* form */}
               <div className="xl:h-[54%] order-2 xl:order-none">
                 <form className="flex flex-col gap-6 p-10 bg-slate-200 rounded-xl">
-                  <h3 className="text-4xl text-black"> Let's Work Together</h3>
+                  <h3 className="text-3xl text-black"> Let's Work Together!</h3>
                   <p className="text-slate-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi obcaecati tempora, minus maiores quidem ipsum, 
-                    quod debitis odio doloremque quasi. </p>
+                    quod . </p>
                     {/*Input*/}
-                    <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <Input type="firstname" placeholder="Firstname"/>
                       <Input type="lastname" placeholder="Lastname"/>
                       <Input type="email" placeholder="Email address"/>
@@ -73,8 +73,14 @@ export default function Contact() {
                       </SelectContent>
                     </Select>
                     {/*textarea*/}
-                    <Textarea className="h-[200px]"
-                    placeholder="Type your message hre."/>
+                    <Textarea 
+                      className="h-[200px]"
+                      placeholder="Type your message here."
+                    />
+                    {/* btn */}
+                    <Button size="sm" className="max-w-40">
+                      Send Message
+                    </Button>
                 </form>
               </div>
             
