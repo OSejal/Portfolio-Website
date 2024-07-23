@@ -8,7 +8,6 @@ import {Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigg
 
 import {FaPhoneAlt, FaEnvelope, FaMapMarkedAlt} from 'react-icons/fa';
 import { title } from "process";
-import { Description } from "@radix-ui/react-dialog";
 
 
 const info = [

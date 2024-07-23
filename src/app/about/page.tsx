@@ -56,25 +56,25 @@ const experience = {
   description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae illo voluptas quis voluptatum! ",
   items: [
     {
-      company: "Code Yourself",
-      position: "MERN Stack developer",
-      duration: "2024-present"
+      company: "Yubi Health",
+      position: "Full Stack developer",
+      duration: " Sept 2022- Feb 2023"
     },
     {
       company: "Code Yourself",
       position: "MERN Stack developer",
-      duration: "2024-present"
+      duration: "June 2024-present"
     },
-    {
-      company: "Code Yourself",
-      position: "MERN Stack developer",
-      duration: "2024-present"
-    },
-    {
-      company: "Code Yourself",
-      position: "MERN Stack developer",
-      duration: "2024-present"
-    }
+    // {
+    //   company: "Code Yourself",
+    //   position: "MERN Stack developer",
+    //   duration: "2024-present"
+    // },
+    // {
+    //   company: "Code Yourself",
+    //   position: "MERN Stack developer",
+    //   duration: "2024-present"
+    // }
   ]
 };
 //education data
@@ -90,13 +90,13 @@ const education = {
     },
     {
       institution: "DAV Kapildev Public School",
-      degree: "",
+      degree: "Senior Secondary",
       duration: "2018-2021"
     },
     {
       institution: "Bridgeford School",
-      degree: "",
-      duration: "2010-2018"
+      degree: "Primary & Secondary",
+      duration: "2009-2018"
     }
   ]
 }
