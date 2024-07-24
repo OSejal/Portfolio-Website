@@ -148,22 +148,9 @@ export default function Project() {
                   onSlideChange={handleSlideChange}
                 >
                   {projects.map((project, index)=> {
-                    return <SwiperSlide key={index} className="w-[%]">
-                      <div className="h-[460px] relative group flex justify-center
-                      items-center bg-slate-300">
-                        {/* overlay */}
-                        <div></div>
-                        {/* image */}
-                        <div className="relative w-full h-full">
-                          <Image 
-                           src={project.image}   
-                           fill 
-                           className="object-cover"
-                           alt="" 
-                          />
-                        </div>
-                      </div>
-                    </SwiperSlide>;
+                    return (
+                      <div></div>
+                    )
                   })}
                   {/* slider buttons */}
                   <WorkSliderBtn 
@@ -171,7 +158,7 @@ export default function Project() {
                    [calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between
                    xl:w-max xl:justify-none"
                    btnStyles="bg-black hover:bg-black-hover text-white text-[22px] w-[44px] h-[44px] flex 
-                   justify-center items-center transition-all "
+                   justify-center items-center transition-all"
                    iconStyles="icon-class"
                    
                   />
