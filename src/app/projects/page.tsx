@@ -141,7 +141,7 @@ export default function Project() {
               </div>
             </div>
             <div className="w-full xl:w-[50%]">
-                <Swiper 
+                {/* <Swiper 
                   spaceBetween={30} 
                   slidesPerView={1} 
                   className="xl:h-[520px] mb-12"
@@ -152,7 +152,6 @@ export default function Project() {
                       <div></div>
                     )
                   })}
-                  {/* slider buttons */}
                   <WorkSliderBtn 
                    containerStyles="flex gap-2 absolute right-0 bottom-
                    [calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between
@@ -162,7 +161,7 @@ export default function Project() {
                    iconStyles="icon-class"
                    
                   />
-                </Swiper>
+                </Swiper> */}
             </div>
           </div>
         </div>
