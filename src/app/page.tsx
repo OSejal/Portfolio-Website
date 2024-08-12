@@ -2,6 +2,7 @@ import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import TextSpan from "@/components/TextSpan";
 import Photo from "@/components/Photo";
 
 const socials = [
@@ -11,6 +12,8 @@ const socials = [
 ];
 
 export default function Home() {
+  const sentence = "Sejal Sinha".split("");
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -19,7 +22,17 @@ export default function Home() {
           <div className="text-center xl:text-left">
             <span className="text-xl">Software Developer</span>
             <h1 className="h1">
-              Hello I&apos;m <br /><span className="text-gray-500">Sejal Sinha</span>
+              Hello I&apos;m <br />
+              <h1 className="text-gray-500">
+              {sentence.map((letter, index) => {
+                return(
+                  <TextSpan key={index} >
+                    {letter === " " ? "\u00A0" : letter}
+                  </TextSpan>
+                )
+              })}
+            </h1>
+              {/* <span className="text-gray-500">Sejal Sinha</span> */}
             </h1>
             <p className="max-w-[500px] mb-9 text-black/80">
               I specialise in MERN technologies and Frontend Development
