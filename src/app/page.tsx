@@ -40,14 +40,14 @@ export default function Home() {
 
             {/* button and socials*/}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2 border-slate-700 hover:bg-slate-800 hover:text-white"
+              <a
+                href="/resume.pdf"
+                download
+                className="uppercase flex items-center gap-2 border-slate-700 hover:bg-slate-800 hover:text-white px-5 py-2 border rounded-lg text-lg font-semibold"
               >
                 <span>Download Resume</span>
                 <FiDownload />
-              </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6"

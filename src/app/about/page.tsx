@@ -102,7 +102,7 @@ const education = {
 //skills
 const skills = {
   title: "My Skills",
-  description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae illo voluptas quis voluptatum!",
+  description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
   skillList:[ 
     {
       icon: <FaHtml5 />,
@@ -167,7 +167,7 @@ export default function About() {
                 <TabsTrigger value="experience">Experience</TabsTrigger>
                 <TabsTrigger value="education">Education</TabsTrigger>
                 <TabsTrigger value="skills">Skills</TabsTrigger>
-                <TabsTrigger value="about-me">About Me</TabsTrigger>
+                <TabsTrigger value="about">About Me</TabsTrigger>
 
               </TabsList>
 
@@ -273,23 +273,23 @@ export default function About() {
                   </div>
                 </TabsContent>
 
-                <TabsContent 
-                  value="about" 
-                  className='w-full text-center xl:text-left'
-                >
-                  <div className='flex flex-col gap-[30px]'>
+                <TabsContent value="about" className='w-full text-center xl:text-left'>
+                  <div className='flex fles-col gap-[30px]'>
                     <h3 className='text-4xl font-bold'>{about.title}</h3>
-                    <p className='max-w-[600px] text-black/60 mx-auto xl:mx-0'>
-                      {about.description}
-                    </p>
-                    <ul>
-                      {about.info.map((item,index)=> {
-                        return <li key={index}>
-                          <span>{item.fieldName}</span>
-                          <span>{item.fieldValue}</span>
+                    <p className='max-w-[600px] text-black mx-auto xl:mx-0' >{about.description}</p>
+                    <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]
+                     mx-auto xl:mx-0'>
+                      {about.info.map((item, index) => {
+                        return <li 
+                         key={index}
+                         className='flex items-center justify-center xl:justify-start gap-4'
+                         >
+                          <span className='text-black'>{item.fieldName}</span>
+                          <span className='text-xl'>{item.fieldValue}</span>
                         </li>
                       })}
                     </ul>
+
                   </div>
                 </TabsContent>
 
