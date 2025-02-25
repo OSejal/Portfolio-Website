@@ -1,6 +1,6 @@
 "use client";
 
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import React,  {useState} from "react";
 import WorkSliderBtn from "@/components/WorkSliderBtn";
 
@@ -16,15 +16,14 @@ import { TooltipContent, Tooltip, TooltipProvider, TooltipTrigger } from "@radix
 const projects = [
   {
     num: "01",
-    category: "MERN ",
-    title: "Hello.chat",
+    category: "MERN",
+    title: "Rock Scissor Game",
     description: 
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
-    stack: [{name: "React.js"}, {name: "Node.js"}, {name:"Mongo DB"}, 
-        {name: "Socket.io"}],
-        image: '/public/pic1',
-        demo: "",
-        github: "",
+    stack: [{name: "HTML"}, {name: "CSS"}, {name:"JS"},],
+      image: '/rps.png',
+      demo: "https://rock-scissor-game.vercel.app/",
+      github: "https://github.com/Sejal1411/Rock-Scissor-Game",
   },
   {
     num: "02",
@@ -33,10 +32,10 @@ const projects = [
     description: 
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
     stack: [{name: "Next.js"}, {name: "NextAuth"}, {name:"Mongo DB"}, 
-        {name: "Tailwind Css"}],
-        image: '/public/pic2',
-        demo: "",
-        github: "",
+      {name: "Tailwind.css"}],
+      image: '/public/pic2',
+      demo: "",
+      github: "",
   },
   {
     num: "03",
@@ -45,10 +44,10 @@ const projects = [
     description: 
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
     stack: [{name: "React.js"}, {name: "Node.js"}, {name:"Mongo DB"}, 
-        {name: "Socket.io"}],
-        image: '/public/pic3',
-        demo: "",
-        github: "",
+      {name: "Socket.io"}],
+      image: '/public/pic3',
+      demo: "",
+      github: "",
   },
 ];
 
@@ -68,7 +67,7 @@ export default function Project() {
        }} 
        className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
        >
-        <div className="container mx-auto">
+       <div className="container mx-auto">
           <div className="flex flex-col xl:flex-row xl:gap-[30px]">
             <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col
             xl:justify-between order-2 xl:order-none">
@@ -135,22 +134,26 @@ export default function Project() {
                   </TooltipProvider>
                   </Link>
                 </div>
-
-                
-
               </div>
             </div>
             <div className="w-full xl:w-[50%]">
-                {/* <Swiper 
+                <Swiper 
                   spaceBetween={30} 
                   slidesPerView={1} 
                   className="xl:h-[520px] mb-12"
                   onSlideChange={handleSlideChange}
                 >
-                  {projects.map((project, index)=> {
-                    return (
-                      <div></div>
-                    )
+                  {projects.map((project, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                    <Image 
+                    src={project.image} 
+                    alt={project.title} 
+                    layout="responsive" 
+                    width={500} 
+                    height={300}/>
+                    </SwiperSlide>
+                  );
                   })}
                   <WorkSliderBtn 
                    containerStyles="flex gap-2 absolute right-0 bottom-
@@ -161,7 +164,7 @@ export default function Project() {
                    iconStyles="icon-class"
                    
                   />
-                </Swiper> */}
+                </Swiper>
             </div>
           </div>
         </div>

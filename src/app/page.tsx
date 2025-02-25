@@ -8,7 +8,7 @@ import Photo from "@/components/Photo";
 const socials = [
   { icon: <FaGithub />, path: 'https://github.com/Sejal1411' },
   { icon: <FaLinkedin />, path: 'https://www.linkedin.com/in/sejal-sinha-8703b5303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
-  { icon: <FaTwitter />, path: 'https://x.com/SSinha58980?t=ymJgphJWvAD3yMYv-ivGJw&s=09' },
+  { icon: <FaTwitter />, path: 'https://x.com/sejal1411?t=_iBOWt0EktsTHiYZZC5DGA&s=09' },
 ];
 
 export default function Home() {
