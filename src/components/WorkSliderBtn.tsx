@@ -15,10 +15,10 @@ interface WorkSliderBtnProps {
     return (
       <div className={containerStyles}>
         <button className={btnStyles} onClick={()=> swiper.slidePrev()}>
-            <PiCaretLeftBold />
+            <PiCaretLeftBold className={iconStyles} />
         </button>
         <button className={btnStyles} onClick={()=> swiper.slideNext()}>
-            <PiCaretRightBold />
+            <PiCaretRightBold className={iconStyles} />
         </button>
       </div>
     );
