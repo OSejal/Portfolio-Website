@@ -11,7 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-slate-900 text-slate-50 hover:bg-slate-900/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90",
         primary: "bg-white text-black",
-        outline: "border border-black bg-transparent text-black hover:bg-white hover:text-black"
+        outline: "border border-black bg-transparent text-black  hover:text-black"
         
       },
       size: {
@@ -22,7 +22,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "outline",
       size: "default",
     },
   }

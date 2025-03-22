@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import { motion } from "framer-motion";
+import { BsArrowRight } from "react-icons/bs";
 
 const info = [
   {
@@ -40,7 +41,7 @@ export default function Contact() {
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-slate-200 rounded-xl">
-              <h3 className="text-3xl text-black">Let&apos;s Work Together!</h3>
+              <h2 className="text-3xl h2 text-gray-400 text-center">Let&apos;s <span className="text-black">connect.</span></h2>
               <p className="text-slate-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi obcaecati tempora, minus maiores quidem ipsum, quod.</p>
               {/* Input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -49,8 +50,9 @@ export default function Contact() {
                 <Input type="email" placeholder="Email address" />
                 <Input type="tel" placeholder="Phone number" />
               </div>
+
               {/* select */}
-              <Select>
+              {/* <Select>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service"></SelectValue>
                 </SelectTrigger>
@@ -62,25 +64,36 @@ export default function Contact() {
                     <SelectItem value="frontend">Frontend Development</SelectItem>
                   </SelectGroup>
                 </SelectContent>
-              </Select>
+              </Select> */}
+
               {/* textarea */}
               <Textarea
                 className="h-[200px]"
                 placeholder="Type your message here."
               />
+
               {/* btn */}
-              <Button size="sm" className="max-w-40">
-                Send Message
+              <Button size="sm" className="rounded-full border border-black
+              max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center
+              overflow-hidden hover:bg-slate-500 hover:text-white  group">
+                <span className="group-hover:--translate-y-[120%] group-hover:opacity-0
+                transition-all duration-500">
+                  Let's talk
+                </span>
+                <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex
+                group-hover:-translate-y-0 group-hover:opacity-100 transition-all
+                duration-300 absolute text-[22px]"/>
               </Button>
             </form>
           </div>
+
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => {
                 return (
-                  <li key={index} className="flex items-center gap-6">
-                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-slate-200 text-black rounded-md flex items-center justify-center">
+                  <li key={index} className="flex items-center gap-6 ">
+                    <div className="w-[42px] h-[42px] xl:w-[72px] xl:h-[72px] bg-slate-200 text-black rounded-md flex items-center justify-center">
                       <div>{item.icon}</div>
                     </div>
                     <div className="flex-1">

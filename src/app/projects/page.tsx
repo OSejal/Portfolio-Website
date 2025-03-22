@@ -1,17 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React,  {useState} from "react";
+import React,  {useRef, useState} from "react";
 import WorkSliderBtn from "@/components/WorkSliderBtn";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Swiper as SwiperType } from 'swiper';
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import { TooltipContent, Tooltip, TooltipProvider, TooltipTrigger } from "@radix-ui/react-tooltip";
+import { Navigation, Pagination } from 'swiper/modules';
 
 const projects = [
   {
@@ -45,7 +47,7 @@ const projects = [
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
     stack: [{name: "React.js"}, {name: "Node.js"}, {name:"Mongo DB"}, 
       {name: "Socket.io"}],
-      image: '/public/pic3',
+      image: '',
       demo: "",
       github: "",
   },
@@ -53,6 +55,7 @@ const projects = [
 
 export default function Project() {
   const [project, setProject] = useState(projects[0]);
+  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   const handleSlideChange = (swiper: SwiperType) => {
     //get current slide index
@@ -67,9 +70,9 @@ export default function Project() {
        }} 
        className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
        >
-       <div className="container mx-auto">
-          <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col 
+      <div className="container mx-auto">
+        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col 
            xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[20px] h-[50%]">
               {/* outline num */}
@@ -142,39 +145,47 @@ export default function Project() {
                 </Link>
               </div>
             </div>
-            </div>
-           <div className="w-full xl:w-[50%]">
-            <Swiper 
-              spaceBetween={30} 
-              slidesPerView={1} 
-              className="xl:h-[520px] mb-12"
-              onSlideChange={handleSlideChange}
-              >
-              {projects.map((project, index) =>{
-                return  <SwiperSlide key={index} className="w-full">
-                  <div className="h-[130px] relative group flex justify-center
-                  items-center bg-slate-200">
-                  {/* overlay */}
-                  <div className="absolute top-0 bottom-0 w-full h-full 
-                  bg-black/10 z-10"></div>
-                  {/* image */}
-                  <div className="relative w-full h-full">
-                    <Image src={project.image} fill alt={""} className="object-cover"/>
-                  </div>
-                  </div>
-                </SwiperSlide>
-              })}
-              {/* slider buttons */}
-              <WorkSliderBtn containerStyles="flex gap-2 absolute right-0 bottom-20px] 
-               xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" 
-               btnStyles="bg-slate-300 hover:bg-white-hover text-primary text-[22px]
-               w-[44px] h-[44px] flex justify-center items-center transition-all "
-              />
-            </Swiper>
-           </div>
           </div>
+
+          <div className="w-full xl:w-[50%] overflow-hidden">
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation={true}
+              pagination={{ clickable: true }}
+              modules={[Navigation, Pagination]}
+              className="w-full h-[300px] "
+              onSwiper={setSwiperInstance}
+              onSlideChange={handleSlideChange}
+              style={{ 
+                "--swiper-navigation-color": "#000000",
+                "--swiper-pagination-color": "#000000" 
+              } as React.CSSProperties}
+             >
+             {projects.map((project, index) => (
+              <SwiperSlide key={index}>
+             <div className="w-full h-[300px] bg-slate-200 flex justify-center items-center relative">
+              {project.image ? (
+              <Image 
+              src={project.image} 
+              alt={project.title}
+              fill
+              className="object-cover"
+             />
+            ) : (
+            <div className="flex flex-col items-center justify-center text-gray-600">
+              <span className="text-xl font-medium">{project.title}</span>
+              <span className="text-sm">No image available</span>
+            </div>
+            )}
+           </div>
+            </SwiperSlide>
+           ))}
+          </Swiper>
+          </div>
+
         </div>
+      </div>
       </motion.section>
     );
   };
-  
