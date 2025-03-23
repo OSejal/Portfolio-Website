@@ -76,7 +76,7 @@ export default function Contact() {
               <Button size="sm" className="rounded-full border border-black
               max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center
               overflow-hidden hover:bg-slate-500 hover:text-white  group">
-                <span className="group-hover:--translate-y-[120%] group-hover:opacity-0
+                <span className="group-hover:-translate-y-[120%] group-hover:opacity-0
                 transition-all duration-500">
                   Let's talk
                 </span>

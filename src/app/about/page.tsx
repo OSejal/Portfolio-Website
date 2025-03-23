@@ -1,17 +1,5 @@
 "use client";
 
-import {FaHtml5, 
-  FaCss3, 
-  FaJs, 
-  FaReact, 
-  FaFigma, 
-  FaNodeJs} 
-  from 'react-icons/fa'
-
-import {
-  SiTailwindcss, SiNextdotjs
-} from "react-icons/si";
-
 const about = {
   title: 'About me',
   description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ut doloremque soluta, assumenda non nesciunt voluptate ipsum.',
@@ -75,6 +63,7 @@ const experience = {
     // }
   ]
 };
+
 //education data
 const education = {
   icon: '',
@@ -99,53 +88,9 @@ const education = {
   ]
 }
 
-//skills
-const skills = {
-  title: "My Skills",
-  description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-  skillList:[ 
-    {
-      icon: <FaHtml5 />,
-      name: "html 5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css",
-    },
-    {
-      icon: <FaReact />,
-      name: "react.js",
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-    },
-  ]
-};
-
 import{ Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-import{ Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-
 import {ScrollArea} from "@/components/ui/scroll-area";
 import { motion } from 'framer-motion';
-
 
 export default function About() {
     return (
@@ -158,7 +103,7 @@ export default function About() {
         className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0' 
         >
 
-          <div className='container mx-auto'>
+        <div className='container mx-auto'>
             <Tabs
              defaultValue='experience'
              className='flex flex-col xl:flex-row gap-[60px]'
@@ -168,9 +113,8 @@ export default function About() {
                 <TabsTrigger value="education">Education</TabsTrigger>
                 <TabsTrigger value="skills">Skills</TabsTrigger>
                 <TabsTrigger value="about">About Me</TabsTrigger>
-
               </TabsList>
-
+              
               <div className='min-h-[70vh] w-full'>
 
                 <TabsContent value="experience" className='w-full'>
@@ -245,33 +189,7 @@ export default function About() {
                   </div>
                 </TabsContent>
 
-                <TabsContent value="skills" className='w-full h-full'>
-                  <div className="flex flex-col gap-[30px]">
-                    <div className='flex flex-col gap-[30px] text-center xl:text-left'>
-                      <h3 className='text-4xl font-bold'>{skills.title}</h3>
-                      <p className='max-w-[600px] text-white mx-auto xl:mx-0'>{skills.description}</p>
-                    </div>
-                    <ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2
-                    xl:gap-[30px]'>
-                      {skills.skillList.map((skill, index)=> {
-                        return <li key={index}>
-                          <TooltipProvider delayDuration={100}>
-                            <Tooltip>
-                              <TooltipTrigger className='w-full h-[150px] bg-slate-100
-                              rounded-full flex justify-center items-center group'>
-                                <div className='text-6xl group-hover:text-slate-400
-                                transition-all duration-300'>{skill.icon}</div>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p className='capitalize'>{skill.name}</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        </li>
-                      })}
-                    </ul>
-                  </div>
-                </TabsContent>
+                
 
                 <TabsContent value="about" className='w-full text-center xl:text-left'>
                   <div className='flex fles-col gap-[30px]'>
@@ -295,7 +213,7 @@ export default function About() {
 
               </div>
             </Tabs>
-          </div>
+        </div>
       </motion.div>
     );
   }
