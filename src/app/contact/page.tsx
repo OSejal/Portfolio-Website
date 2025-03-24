@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
+import Typing from "react-typing-effect";
 
 const info = [
   {
@@ -41,7 +42,9 @@ export default function Contact() {
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-slate-200 rounded-xl">
-              <h2 className="text-3xl h2 text-gray-400 text-center">Let&apos;s <span className="text-black">connect.</span></h2>
+              <h2 className="text-3xl h2 text-gray-400 text-center">Let&apos;s <span className="text-black">                      
+                <Typing text="connect" speed={100} eraseSpeed={30} eraseDelay={1000}/>
+              </span></h2>
               <p className="text-slate-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi obcaecati tempora, minus maiores quidem ipsum, quod.</p>
               {/* Input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -51,20 +54,6 @@ export default function Contact() {
                 <Input type="tel" placeholder="Phone number" />
               </div>
 
-              {/* select */}
-              {/* <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service"></SelectValue>
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="web">Web Development</SelectItem>
-                    <SelectItem value="uiux">UI/UX design</SelectItem>
-                    <SelectItem value="frontend">Frontend Development</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select> */}
 
               {/* textarea */}
               <Textarea
@@ -73,11 +62,11 @@ export default function Contact() {
               />
 
               {/* btn */}
-              <Button size="sm" className="rounded-full border border-black
-              max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center
-              overflow-hidden hover:bg-slate-500 hover:text-white  group">
+              <Button size="sm" variant="default" className="rounded-full max-w-[170px] px-8 
+                transition-all duration-300 flex items-center justify-center
+                overflow-hidden hover:text-white group bg-gradient-to-r from-gray-900 to bg-white">
                 <span className="group-hover:-translate-y-[120%] group-hover:opacity-0
-                transition-all duration-500">
+                transition-all duration-500 ">
                   Let's talk
                 </span>
                 <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex

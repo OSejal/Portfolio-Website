@@ -19,7 +19,9 @@ const Header = () => {
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
-           <Button variant="default" className="animate-bounce">Hire Me</Button>
+           <Button variant="default" className="animate-bounce bg-gradient-to-r from-gray-900 to bg-white">
+            Hire Me
+           </Button>
           </Link>
         </div>
 

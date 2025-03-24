@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import React,  {useRef, useState} from "react";
-import WorkSliderBtn from "@/components/WorkSliderBtn";
 
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Swiper as SwiperType } from 'swiper';
@@ -77,7 +76,7 @@ export default function Project() {
             <div className="flex flex-col gap-[20px] h-[50%]">
               {/* outline num */}
               <div className="text-8xl leading-none font-extrabold text-slate-800
-              text-outline">
+              bg-gradient-to-tr from-white via-gray-600 to-black bg-clip-text text-transparent ">
                 {project.num}
               </div>
               {/* project category*/}
@@ -109,9 +108,9 @@ export default function Project() {
                   <TooltipProvider>
                     <Tooltip>
                     <TooltipTrigger className="w-[50px] h-[50px] rounded-full p-2
-                    bg-slate-200 flex items-center justify-center group hover:bg-slate-600">
+                    bg-slate-300 flex items-center justify-center group hover:bg-slate-600">
                       <button className="flex items-center gap-2 text-black
-                      hover:text-white transition-all duration-500">
+                      hover:text-white transition-all duration-500 bg">
                         {/* <span>View Demo</span> */}
                         <BsArrowUpRight className="text-white text-2xl
                         "/>
