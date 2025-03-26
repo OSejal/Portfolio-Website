@@ -85,6 +85,7 @@ import{ Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import Typing from "react-typing-effect";
 import { motion } from 'framer-motion';
+import { IconCloudDemo } from "@/components/Cloud";
 
 export default function About() {
     return (
@@ -190,6 +191,18 @@ export default function About() {
                   </div>
                 </TabsContent>
 
+                 {/* Skills */}
+                <TabsContent value="skills" className='w-full'>
+                  <div className='flex flex-col gap-[30px] text-center xl:text-left'>
+                    <h3 className="text-4xl font-bold">
+                      <Typing text={[about.title]} speed={100} eraseSpeed={30} eraseDelay={1000}/>
+                    </h3>
+                    <IconCloudDemo />
+                  </div>
+                </TabsContent>
+
+
+                {/* Beyobd the Code */}
                 <TabsContent value="about" className='w-full'>
                   <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                     <h3 className="text-4xl font-bold">
@@ -221,6 +234,7 @@ export default function About() {
                   </div>
                 </TabsContent>
 
+                
               </div>
             </Tabs>
         </div>
