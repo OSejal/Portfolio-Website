@@ -3,11 +3,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
-import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 import Typing from "react-typing-effect";
+import TextReveal from "@/components/textReveal";
 
 const info = [
   {
@@ -29,23 +28,19 @@ const info = [
 
 export default function Contact() {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="py-6"
-    >
-      <div className="container mx-auto">
+    <div className="py-6">
+      <div className="container  flex flex-col gap-5 justify-items-center">
+            <div className="text-center mb-12 px-4 sm:px-10 lg:px-8">
+                <TextReveal text="HIRE ME"/>
+            </div>
         <div className="flex flex-col xl:flex-row gap-[30px]">
+          
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-slate-200 rounded-xl">
               <h2 className="text-3xl h2 text-gray-400 text-center">Let&apos;s <span className="text-black">                      
                 <Typing text="connect" speed={100} eraseSpeed={30} eraseDelay={1000}/>
               </span></h2>
-              <p className="text-slate-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi obcaecati tempora, minus maiores quidem ipsum, quod.</p>
               {/* Input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="text" placeholder="Firstname" />
@@ -96,6 +91,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 }
