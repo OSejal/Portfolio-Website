@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import LiIcon from "@/components/LiIcon";
 
@@ -10,22 +9,15 @@ type DetailsProps = {
 };
 
 const Details: React.FC<DetailsProps> = ({ position, company, time }) => {
-  return (
-    <li className="relative flex items-start gap-6 mt-5">
-      {/* Icon Positioned on the Timeline */}
-      <div className="absolute left-[5px] top-1/2 transform -translate-y-1/2">
-        <LiIcon />
-      </div>
-
+  return <li className="mt-5">
+    <LiIcon />
       <div>
-        <h3 className="capitalize font-medium text-slate-600">
-          {position}&nbsp;
-          <span className="text-black">@{company}</span>
-        </h3>
-        <span>{time}</span>
+        <h3 className="capitalize font-medium text-slate-600">{position}&nbsp;<span className=" text-black">@{company}</span></h3>
+          <span>
+            {time}
+          </span>
       </div>
-    </li>
-  );
+     </li>
 };
 
 export default function Experience() {
@@ -40,7 +32,7 @@ export default function Experience() {
       {/* Details Section (Timeline) */}
       <div className="w-full relative">
         {/* Vertical Line */}
-        <div className="absolute h-full w-[2px] bg-black top-0 left-[10px]" />
+        {/* <div className="absolute h-full w-[3px] bg-black top-0 left-[0px]" /> */}
 
         <ul className="w-full flex flex-col items-start justify-between ml-14">
           <Details position="MERN Developer" company="XYZ" time="4 months" />

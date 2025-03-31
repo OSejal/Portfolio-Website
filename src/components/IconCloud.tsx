@@ -25,7 +25,9 @@ const slugs = [
     "mongodb",
     "c",
     "jira",
-    "python"
+    "python",
+    "docker",
+    "html"
   ];
 
   

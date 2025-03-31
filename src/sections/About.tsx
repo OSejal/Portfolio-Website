@@ -6,7 +6,7 @@ import TextReveal from "@/components/textReveal";
 
 export default function About() {
   return (
-    <div className="flex flex-col gap-10 justify-center items-center pt-10">
+    <div className="flex flex-col gap-10 justify-center items-center">
         <div className="pb-2">
           <TextReveal text="ABOUT ME" />
         </div>

@@ -8,6 +8,9 @@ const Header = () => {
         <a href="#about" className="nav-item">
           About
         </a>
+        <a href="#skills" className="nav-item">
+          Skills
+        </a>
         <a href="#projects" className="nav-item">
           Projects
         </a>
@@ -19,4 +22,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header; 

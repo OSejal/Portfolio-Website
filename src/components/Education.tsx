@@ -33,7 +33,7 @@ export default function Education() {
 
       {/* Details Section */}
       <div className="w-full relative">
-        <div className="absolute h-full w-[2px] bg-black top-2 left-4 origin-top"/>
+        {/* <div className="absolute h-full w-[2px] bg-black top-2 left-4 origin-top"/> */}
         <ul className="w-full flex flex-col items-start justify-between ml-14">
           <Details position="MERN Developer" company="XYZ" time="4 months" />
           <Details position="MERN Developer" company="XYZ" time="4 months" />
