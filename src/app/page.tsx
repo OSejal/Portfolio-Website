@@ -4,6 +4,7 @@ import Hero from "@/sections/Hero";
 import Skills from "@/sections/Skills";
 import Projects from "@/sections/Projects";
 import Contact from "@/sections/Contact";
+import About from "@/sections/About";
 
 
 
@@ -16,9 +17,15 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="container mx-auto h-[642px] flex items-center mt-20">
+      <section id="about" className="container mx-auto h-[100vh] flex items-center mt-20">
+        <About />
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="container mx-auto h-[642px] flex items-center mt-20">
         <Skills />
       </section>
+
 
       {/* Projects Section */}
       <section id="projects" className="container mx-auto h-[642px] flex items-center mt-32">

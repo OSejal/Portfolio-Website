@@ -15,7 +15,7 @@ export default function TextReveal({ text }: TextRevealProps) {
   return (
     <motion.h1
       ref={ref}
-      className="text-4xl font-bold text-gray-800 "
+      className="text-4xl font-bold text-gray-800"
     >
       {headingChars.map((char, index) => (
         <motion.span

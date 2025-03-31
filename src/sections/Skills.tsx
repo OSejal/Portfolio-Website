@@ -82,8 +82,8 @@ export default function About() {
           </div>
 
           {/* Shadow Border */}
-            <div className="absolute top-[8px] left-[8px] w-full h-full bg-slate-700 rounded-xl -z-10" />
-            </div>
-      </div>
-    );
+          <div className="absolute top-[8px] left-[8px] w-full h-full bg-slate-700 rounded-xl -z-10" />
+        </div>
+    </div>
+  );
 }

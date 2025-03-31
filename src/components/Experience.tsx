@@ -1,0 +1,53 @@
+"use client";
+
+import Image from "next/image";
+import LiIcon from "@/components/LiIcon";
+
+type DetailsProps = {
+  position: string;
+  company: string;
+  time: string;
+};
+
+const Details: React.FC<DetailsProps> = ({ position, company, time }) => {
+  return (
+    <li className="relative flex items-start gap-6 mt-5">
+      {/* Icon Positioned on the Timeline */}
+      <div className="absolute left-[5px] top-1/2 transform -translate-y-1/2">
+        <LiIcon />
+      </div>
+
+      <div>
+        <h3 className="capitalize font-medium text-slate-600">
+          {position}&nbsp;
+          <span className="text-black">@{company}</span>
+        </h3>
+        <span>{time}</span>
+      </div>
+    </li>
+  );
+};
+
+export default function Experience() {
+  return (
+    <div className="flex flex-col items-center gap-6">
+      {/* Title and Image Section */}
+      <div className="flex flex-row items-center gap-3">
+        <Image src="/expertise.png" alt="expertise logo" width={30} height={30} />
+        <h1 className="text-2xl font-normal text-center">Experience</h1>
+      </div>
+
+      {/* Details Section (Timeline) */}
+      <div className="w-full relative">
+        {/* Vertical Line */}
+        <div className="absolute h-full w-[2px] bg-black top-0 left-[10px]" />
+
+        <ul className="w-full flex flex-col items-start justify-between ml-14">
+          <Details position="MERN Developer" company="XYZ" time="4 months" />
+          <Details position="Frontend Developer" company="ABC" time="6 months" />
+          <Details position="Software Engineer" company="DEF" time="1 year" />
+        </ul>
+      </div>
+    </div>
+  );
+}

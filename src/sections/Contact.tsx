@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import { BsArrowRight } from "react-icons/bs";
-import Typing from "react-typing-effect";
 import TextReveal from "@/components/textReveal";
 
 const info = [
@@ -30,17 +29,15 @@ export default function Contact() {
   return (
     <div className="py-6">
       <div className="container  flex flex-col gap-5 justify-items-center">
-            <div className="text-center mb-12 px-4 sm:px-10 lg:px-8">
-                <TextReveal text="HIRE ME"/>
-            </div>
+        <div className="text-center mb-12 px-4 sm:px-10 lg:px-8">
+          <TextReveal text="HIRE ME"/>
+        </div>
+
         <div className="flex flex-col xl:flex-row gap-[30px]">
-          
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-slate-200 rounded-xl">
-              <h2 className="text-3xl h2 text-gray-400 text-center">Let&apos;s <span className="text-black">                      
-                <Typing text="connect" speed={100} eraseSpeed={30} eraseDelay={1000}/>
-              </span></h2>
+              <h2 className="text-3xl h2 text-gray-400 text-center">Let&apos;s <span className="text-black">connect</span></h2>
               {/* Input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="text" placeholder="Firstname" />
