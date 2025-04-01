@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <header className="w-full py-4 xl:py-5 fixed top-0 z-50 flex justify-center">
-      <nav className="bg-slate-100 shadow-md px-6 py-2 rounded-full flex items-center gap-10">
+    <header className="w-full py-4 xl:py-5 fixed top-0 z-50 justify-center hidden md:flex m">
+      <nav className="bg-slate-100 shadow-md px-6 py-2 rounded-full flex items-center gap-6 md:gap-10">
         <a href="#home" className="nav-item">
           Home
         </a>
@@ -22,4 +22,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;
