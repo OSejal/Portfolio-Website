@@ -22,7 +22,7 @@ const Details: React.FC<DetailsProps> = ({ position, company, time }) => {
 
 export default function Experience() {
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col items-center gap-6 w-full px-4">
       {/* Title and Image Section */}
       <div className="flex flex-row items-center gap-3">
         <Image src="/expertise.png" alt="expertise logo" width={30} height={30} />
@@ -31,10 +31,7 @@ export default function Experience() {
 
       {/* Details Section (Timeline) */}
       <div className="w-full relative">
-        {/* Vertical Line */}
-        {/* <div className="absolute h-full w-[3px] bg-black top-0 left-[0px]" /> */}
-
-        <ul className="w-full flex flex-col items-start justify-between ml-14">
+        <ul className="w-full flex flex-col items-start justify-between ml-6 md:ml-14">
           <Details position="MERN Developer" company="XYZ" time="4 months" />
           <Details position="Frontend Developer" company="ABC" time="6 months" />
           <Details position="Software Engineer" company="DEF" time="1 year" />

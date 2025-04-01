@@ -3,8 +3,8 @@
 const projects = [
     {
       num: "01",
-      category: "MERN",
       title: "Rock Scissor Game",
+      // title: "Rock Scissor Game",
       description: 
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
       stack: [{name: "HTML"}, {name: "CSS"}, {name:"JS"},],
@@ -14,8 +14,8 @@ const projects = [
     },
     {
       num: "02",
-      category: "MERN ",
-      title: "Courses.io",
+      title: "Courses.io ",
+      // title: "Courses.io",
       description: 
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
       stack: [{name: "Next.js"}, {name: "NextAuth"}, {name:"Mongo DB"}, 
@@ -26,8 +26,8 @@ const projects = [
     },
     {
       num: "03",
-      category: "MERN ",
       title: "Beautify",
+      // title: "Beautify",
       description: 
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
       stack: [{name: "React.js"}, {name: "Node.js"}, {name:"Mongo DB"}, 

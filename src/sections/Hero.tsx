@@ -18,21 +18,19 @@ export default function Hero() {
     <div className="relative flex flex-col xl:flex-row items-center justify-between w-full mt-10 px-4">
       {/* Text */}
       <div className="text-center xl:text-left">
-        <span className="text-lg md:text-xl">Software Developer</span>
-        <h1 className="h1">
+        <span className="text-lg font-semibold md:text-2xl">Software Developer</span>
+        <h1 className="h2 mt-5">
           Hello I&apos;m <br />
-          <h1 className="text-gray-500 text-4xl md:text-5xl">
+          <h1 className="text-gray-500 lg:text-6xl md:text-4xl">
             {sentence.map((letter, index) => (
               <TextSpan key={index}>{letter === " " ? "\u00A0" : letter}</TextSpan>
             ))}
           </h1>
         </h1>
-        <p className="max-w-[400px] md:max-w-[500px] mb-6 md:mb-9 text-black/80 text-base md:text-lg">
-          I specialize in MERN technologies and Frontend Development
-        </p>
+        
 
         {/* Buttons & Socials */}
-        <div className="flex flex-col xl:flex-row items-center gap-6 md:gap-8">
+        <div className="flex flex-col xl:flex-row items-center gap-6 md:gap-8 mt-10">
           <a
             href="/resume.pdf"
             download
@@ -59,9 +57,9 @@ export default function Hero() {
       {/* Centered Arrow for Scrolling Down */}
       <Link
         href="#about"
-        className="absolute lg:bottom-2 md:left-[650px] md:bottom-2 lg:left-[600px] transform -translate-x-1/2 z-10 hover:scale-110 transition-transform duration-300"
+        className="absolute lg:bottom-[-60px] md:left-[600px] md:bottom-2 sm:bottom-2  transform -translate-x-1/2 z-10 hover:scale-110 transition-transform duration-300"
       >
-        <FaArrowDown className="bg-neutral-800 rounded-full animate-bounce w-8 h-12 p-2 text-white"  />
+        <FaArrowDown className="bg-neutral-800 rounded-full animate-bounce w-8 h-8 p-2  text-white"  />
       </Link>
     </div>
   );

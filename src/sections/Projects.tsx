@@ -17,21 +17,25 @@ export default function Projects() {
   const [project, setProject] = useState(projects[0]);
 
   return (
-    <div className="min-h-[80vh] flex flex-col justify-center xl:px-0 gap-10 pt-30">
+    <div className="min-h-[80vh] flex flex-col justify-center xl:px-0 gap-10 pt-30 overflow-hidden">
       <div className="container mx-auto">
         {/* Title */}
-        <div className="mb-10 flex justify-center">
-          <TextReveal text="PROJECTS" />
+        <div className="mb-10 flex justify-center calistoga text-3xl">
+          <TextReveal text="Projects" />
         </div>
 
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           {/* Left Section - Project Details */}
           <div className="w-full xl:w-[50%] flex flex-col gap-6 order-2 xl:order-none">
-            <div className="text-8xl font-extrabold text-slate-800 bg-gradient-to-tr from-white via-gray-600 to-black bg-clip-text text-transparent">
+          <div className="text-8xl font-extrabold text-transparent
+            stroke-gray-300 stroke-[2px] 
+            [text-shadow:_2px_2px_0px_theme(colors.gray.400)] 
+            [-webkit-text-stroke:2px_black]">
               {project.num}
-            </div>
-            <h2 className="text-[42px] font-bold text-black capitalize">
-              {project.category} project
+          </div>
+
+            <h2 className="text-[30px] font-bold text-black capitalize">
+              {project.title}
             </h2>
             <p className="text-gray-900">{project.description}</p>
 
@@ -39,7 +43,7 @@ export default function Projects() {
               {project.stack.map((item, index) => (
                 <li key={index} className="text-xl text-black">
                   {item.name}
-                  {index !== project.stack.length - 1 && ","}
+                  {index !== project.stack.length - 1 }
                 </li>
               ))}
             </ul>
@@ -55,7 +59,7 @@ export default function Projects() {
                 <Link key={index} href={href}>
                   <TooltipProvider>
                     <Tooltip>
-                      <TooltipTrigger className="w-[50px] h-[50px] rounded-full p-2 bg-slate-300 flex items-center justify-center group hover:bg-slate-600">
+                      <TooltipTrigger className="w-[50px] h-[50px] rounded-full p-2 bg-slate-400 flex items-center justify-center group hover:bg-slate-600">
                         {icon}
                       </TooltipTrigger>
                       <TooltipContent sideOffset={5}>
@@ -69,14 +73,14 @@ export default function Projects() {
           </div>
 
           {/* Right Section - Swiper Slider */}
-          <div className="w-full xl:w-[50%] overflow-hidden rounded-lg">
+          <div className="w-full xl:w-[50%] overflow-hidden">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
               navigation
               pagination={{ clickable: true }}
               modules={[Navigation, Pagination]}
-              className="w-full h-[300px]"
+              className="w-full h-[370px] p-2 shadow-lg shadow-slate-900 rounded-xl"
               onSlideChange={(swiper) => setProject(projects[swiper.activeIndex])}
               style={{
                 "--swiper-navigation-color": "#000000",
@@ -85,9 +89,9 @@ export default function Projects() {
             >
               {projects.map(({ image, title }, index) => (
                 <SwiperSlide key={index}>
-                  <div className="w-full h-[300px] bg-slate-200 flex justify-center items-center relative">
+                  <div className="w-full h-[370px] bg-slate-200 flex justify-center items-center relative rounded-xl">
                     {image ? (
-                      <Image src={image} alt={title} fill className="object-cover" />
+                      <Image src={image} alt={title} fill className="object-cover rounded-xl" />
                     ) : (
                       <div className="flex flex-col items-center justify-center text-gray-600">
                         <span className="text-xl font-medium">{title}</span>

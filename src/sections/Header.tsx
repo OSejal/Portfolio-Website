@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="w-full py-4 xl:py-5 fixed top-0 z-50 justify-center hidden md:flex m">
+    <header className="w-full py-4 xl:py-5 fixed top-0 z-50 justify-center hidden md:flex">
       <nav className="bg-slate-100 shadow-md px-6 py-2 rounded-full flex items-center gap-6 md:gap-10">
         <a href="#home" className="nav-item">
           Home

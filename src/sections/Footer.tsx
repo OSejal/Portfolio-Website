@@ -9,9 +9,10 @@ export default function Footer() {
         {/* Scroll to Top Button */}
         <Link
           href="#home"
-          className="absolute bottom-5 right-5 hover:scale-110 transition-transform duration-300"
+          className="absolute bottom-5 left-1/2 transform -translate-x-1/2 
+          hover:scale-110 transition-transform duration-300"
         >
-          <FaArrowUp className="bg-neutral-800 rounded-full animate-bounce w-8 h-12 p-2 text-white" />
+          <FaArrowUp className="bg-neutral-800 rounded-full animate-bounce w-8 h-8 p-2 text-white" />
         </Link>
       </div>
     );
