@@ -31,10 +31,10 @@ export default function Experience() {
 
       {/* Details Section (Timeline) */}
       <div className="w-full relative">
-        <ul className="w-full flex flex-col items-start justify-between ml-6 md:ml-14">
-          <Details position="MERN Developer" company="XYZ" time="4 months" />
-          <Details position="Frontend Developer" company="ABC" time="6 months" />
-          <Details position="Software Engineer" company="DEF" time="1 year" />
+        <ul className="w-full flex flex-col items-start justify-between ml-10 md:ml-14">
+          <Details position="SDE-FS" company="Secpen Labs" time="April-Present" />
+          <Details position="MERN Developer" company="CodeYourself" time="1 month" />
+          {/* <Details position="Software Engineer" company="DEF" time="1 year" /> */}
         </ul>
       </div>
     </div>

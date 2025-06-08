@@ -15,11 +15,11 @@ export default function Hero() {
   const sentence = "Sejal Sinha".split("");
 
   return (
-    <div className="relative flex flex-col xl:flex-row items-center justify-between w-full mt-10 px-4">
+    <div className="relative flex flex-col xl:flex-row items-center justify-between w-full mt-10 px-3">
       {/* Text */}
       <div className="text-center xl:text-left">
-        <span className="text-lg font-semibold md:text-2xl">Software Developer</span>
-        <h1 className="h2 mt-5">
+        <span className="text-lg font-medium md:text-2xl">Software Developer</span>
+        <h1 className="h1 mt-5">
           Hello I&apos;m <br />
           <h1 className="text-gray-500 lg:text-6xl md:text-4xl">
             {sentence.map((letter, index) => (

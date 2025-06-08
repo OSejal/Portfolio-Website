@@ -33,10 +33,10 @@ export default function Education() {
 
       {/* Details Section */}
       <div className="w-full relative">
-        <ul className="w-full flex flex-col items-start justify-between ml-6 md:ml-14">
-          <Details position="B.Tech " company="XYZ" time="4 years" />
-          <Details position="Higher Secondary" company="ABC" time="2 years" />
-          <Details position="High School" company="DEF" time="2 years" />
+        <ul className="w-full flex flex-col items-start justify-between ml-10 md:ml-14 ">
+          <Details position="B.Tech " company="Heritage Institute Of Technology" time="2021-2025" />
+          <Details position="Senior Secondary" company="Dav Kapildev Public School" time="2018-2021" />
+          <Details position="Primary" company="Bridgeford School" time="2009-2018" />
         </ul>
       </div>
     </div>

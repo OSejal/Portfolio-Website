@@ -9,6 +9,7 @@ import {
   renderSimpleIcon,
   SimpleIcon,
 } from "react-icon-cloud";
+import React from "react";
 
 export const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
@@ -17,35 +18,30 @@ export const cloudProps: Omit<ICloud, "children"> = {
       justifyContent: "center",
       alignItems: "center",
       width: "100%",
-      paddingTop: 40,
+      paddingTop: 10,
     },
   },
   options: {
     reverse: true,
     depth: 1,
     wheelZoom: false,
-    zoom: 0.9,
     imageScale: 2,
-    radiusX: 1,
-    radiusY: 1,
-    radiusZ: 1,
     activeCursor: "default",
     tooltip: "native",
-    initial: [0.05, -0.05],
+    initial: [0.1, -0.1],
     clickToFront: 500,
     tooltipDelay: 0,
     outlineColour: "#0000",
     maxSpeed: 0.03,
-    minSpeed: 0.03,
-  }
-  
-  
+    minSpeed: 0.01,
+    // dragControl: false,
+  },
 };
 
 export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
-  const bgHex = "#e2e8f0"; // Tailwind's slate-200
-  const fallbackHex = "#1e293b"; // slate-800 or a readable dark gray
-  const minContrastRatio = 2.5; // to ensure visibility over slate-200
+  const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
+  const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
+  const minContrastRatio = theme === "dark" ? 2 : 1.2;
 
   return renderSimpleIcon({
     icon,
@@ -61,8 +57,6 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
     },
   });
 };
-
-
 
 export type DynamicCloudProps = {
   iconSlugs: string[];
@@ -82,7 +76,7 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
     if (!data) return null;
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "dark"),
+      renderCustomIcon(icon, theme || "light")
     );
   }, [data, theme]);
 

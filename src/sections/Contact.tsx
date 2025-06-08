@@ -30,14 +30,13 @@ export default function Contact() {
              </h2>
             </div>
             
-
-           {/* Input Fields */}
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Input Fields */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Input type="text" placeholder="Firstname" />
             <Input type="text" placeholder="Lastname" />
             <Input type="email" placeholder="Email address" />
             <Input type="tel" placeholder="Phone number" />
-           </div>
+          </div>
 
            {/* Textarea */}
            <Textarea className="h-[200px]" placeholder="Type your message here." />
