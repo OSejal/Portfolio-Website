@@ -16,18 +16,18 @@ const Photo = () => {
         animate={{ rotate: 360 }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
       >
-      <svg className="w-full h-full" viewBox="0 0 506 506">
-      <circle
-        cx="253"
-        cy="253"
-        r="200"
-        fill="none"
-        stroke="black"
-        strokeWidth="5"
-        strokeDasharray="25, 25" // more space between dashes
-        strokeLinecap="round"   // makes dash ends circular
-      />
-      </svg>
+        <svg className="w-full h-full" viewBox="0 0 506 506">
+          <circle
+            cx="253"
+            cy="253"
+            r="200"
+            fill="none"
+            stroke="black"
+            strokeWidth="6"
+            strokeDasharray="30,15,30,95" // two lines, small gap, two lines, big gap
+            strokeLinecap="round"
+          />
+        </svg>
       </motion.div>
 
       {/* Circular Image Wrapper */}
