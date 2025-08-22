@@ -3,39 +3,60 @@
 const projects = [
     {
       num: "01",
-      title: "Rock Scissor Game",
-      // title: "Rock Scissor Game",
+      title: "Packloop",
       description: 
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
-      stack: [{name: "HTML"}, {name: "CSS"}, {name:"JS"},],
-        image: '/rps.png',
-        demo: "https://rock-scissor-game.vercel.app/",
-        github: "https://github.com/Sejal1411/Rock-Scissor-Game",
+      "A web application where MCP can manage partners, track orders, add funds and delete funds", 
+      stack: [{name: "React.js"}, {name: "Cloudinary"}, {name:" Tailwind CSS"}, {name:"Razorpay API"}],
+        image: '/1.png',
+        demo: "https://www.packloop.online/",
+        github: "https://github.com/OSejal/Packloop",
     },
     {
       num: "02",
-      title: "Courses.io ",
-      // title: "Courses.io",
+      title: "FinMaster",
       description: 
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
-      stack: [{name: "Next.js"}, {name: "NextAuth"}, {name:"Mongo DB"}, 
+      "A web application where users can manage their finanaces through built-in AI features like scanning the receipt. Users can also view their spendings in a chart form", 
+      stack: [{name: "Next.js"}, {name: "Shadcn UI"}, {name:"Gemini AI"}, {name:"Prisma"},
         {name: "Tailwind.css"}],
-        image: '',
-        demo: "",
-        github: "",
+        image: '/2.png',
+        demo: "https://www.finmaster.online/",
+        github: "https://github.com/OSejal/FinMaster",
     },
     {
       num: "03",
-      title: "Beautify",
-      // title: "Beautify",
+      title: "Portfolio",
       description: 
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
-      stack: [{name: "React.js"}, {name: "Node.js"}, {name:"Mongo DB"}, 
+      "This is my portfolio website where I have shown my education background, showcased projects and my skills", 
+      stack: [{name: "Next.js"}, {name: "Typescript"}, {name:"Framer Motion"}, 
         {name: "Socket.io"}],
-        image: '',
-        demo: "",
-        github: "",
+        image: '/3.png',
+        demo: "https://portfolio-website-k3ry.vercel.app/",
+        github: "https://github.com/OSejal/Portfolio-Website",
     },
+
+    // {
+    //   num: "04",
+    //   title: "Hola.chat",
+    //   description: 
+    //   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
+    //   stack: [{name: "React.js"}, {name: "Node.js"}, {name:"Mongo DB"}, 
+    //     {name: "Socket.io"}],
+    //     image: '',
+    //     demo: "",
+    //     github: "",
+    // },
+
+    // {
+    //   num: "04",
+    //   title: "Zapier",
+    //   description: 
+    //   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, laborum laboriosam, nesciunt suscipit rerum asperiores", 
+    //   stack: [{name: "React.js"}, {name: "Node.js"}, {name:"Mongo DB"}, 
+    //     {name: "Socket.io"}],
+    //     image: '',
+    //     demo: "",
+    //     github: "",
+    // },
   ];
 
   export default projects;
