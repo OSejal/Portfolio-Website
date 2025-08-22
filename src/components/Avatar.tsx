@@ -14,19 +14,20 @@ const Photo = () => {
       <motion.div 
         className="absolute w-[360px] xl:w-[440px] h-[360px] xl:h-[440px] pointer-events-none select-none"
         animate={{ rotate: 360 }}
-        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
       >
-        <svg className="w-full h-full" viewBox="0 0 506 506">
-          <circle
-            cx="253"
-            cy="253"
-            r="200"
-            fill="none"
-            stroke="black"
-            strokeWidth="4"
-            strokeDasharray="20,15"
-          />
-        </svg>
+      <svg className="w-full h-full" viewBox="0 0 506 506">
+      <circle
+        cx="253"
+        cy="253"
+        r="200"
+        fill="none"
+        stroke="black"
+        strokeWidth="5"
+        strokeDasharray="25, 25" // more space between dashes
+        strokeLinecap="round"   // makes dash ends circular
+      />
+      </svg>
       </motion.div>
 
       {/* Circular Image Wrapper */}
